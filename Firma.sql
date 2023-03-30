@@ -1,5 +1,5 @@
 USE Firma
-SELECT * FROM Pracownicy
+
 CREATE TABLE Pracownicy (
 
 ID INT PRIMARY KEY NOT NULL, 
@@ -23,35 +23,35 @@ INSERT INTO Pracownicy VALUES (11, 'Maciej', 'Technolog', 8000, '2015-01-19')
 INSERT INTO Pracownicy VALUES (12, 'Bartek', 'Technolog', 2400, '2022-11-22')
 INSERT INTO Pracownicy VALUES (13, 'Maja', 'Sekretarka', 2800, '2023-03-23')
 
-1. Ile wynosi suma pensji wszystkich pracownikÛw Firmy?
+1. Ile wynosi suma pensji wszystkich pracownik√≥w Firmy?
 
 SELECT SUM(Pensja) as SumaPensjiPracownikow FROM Pracownicy
 
-2. Jakie jest úrednie wynagrodzenie pracownikÛw dla kazdej roli w firmie?
+2. Jakie jest ≈õrednie wynagrodzenie pracownik√≥w dla kazdej roli w firmie?
 
 SELECT Rola, AVG(Pensja) as SredniaPensja FROM Pracownicy GROUP BY Rola
 
-3. Ilu pracownikÛw zosta≥o zatrudnionych miÍdzy 2012 a 2018 rokiem i na jakπ pozycjÍ?
+3. Ilu pracownik√≥w zosta≈Ço zatrudnionych miƒôdzy 2012 a 2018 rokiem i na jakƒÖ pozycjƒô?
 
 SELECT COUNT(rola) as liczba_zatrudnionych, Rola FROM Pracownicy WHERE Data_zatrudnienia BETWEEN '2012-01-01' AND '2017-12-31' 
 GROUP BY rola
 
-4. Jakie jest najwyøsze a jakie najniøsze wynagrodzenie w firmie?
+4. Jakie jest najwy≈ºsze a jakie najni≈ºsze wynagrodzenie w firmie?
 
-SELECT MAX(Pensja) najwyøsza_pensja, MIN(Pensja) as najniøsza_pensja FROM Pracownicy 
+SELECT MAX(Pensja) najwy≈ºsza_pensja, MIN(Pensja) as najni≈ºsza_pensja FROM Pracownicy 
 
 
-5. KtÛry pracownik ma najwyøsze wynagrodzenie w firmie, a ktÛry najniøsze?
+5. Kt√≥ry pracownik ma najwy≈ºsze wynagrodzenie w firmie, a kt√≥ry najni≈ºsze?
 
 SELECT imie, pensja FROM Pracownicy 
 WHERE pensja =(SELECT MAX(Pensja) FROM Pracownicy)  
 OR pensja = (SELECT MIN(Pensja)  FROM Pracownicy) 
 
-6. Ilu pracownikÛw jest zatrudnionych d≥uøej niø 5 lat?
+6. Ilu pracownik√≥w jest zatrudnionych d≈Çu≈ºej ni≈º 5 lat?
 
 SELECT COUNT(*) as pracownik_dluzej_niz_5_lat FROM Pracownicy WHERE data_zatrudnienia <  DATEADD(Year, -5, GETDATE()) 
 
-7. Jakie jest úrednie wynagrodzenie dla pracownikÛw zatrudnionych od 2017 roku?
+7. Jakie jest ≈õrednie wynagrodzenie dla pracownik√≥w zatrudnionych od 2017 roku?
 
 SELECT AVG(Pensja) as srednia_pensja_od2017 FROM Pracownicy WHERE data_zatrudnienia >='2017-01-01'
 
@@ -73,7 +73,7 @@ END
 ALTER TABLE Pracownicy
 ADD "Podwyzki" INT 
 
---- Kaødy z pracownikÛw zatrudnionych minimum 7 lat dostanie 1000 z≥ podwyøki, reszta 420 z≥
+--- Ka≈ºdy z pracownik√≥w zatrudnionych minimum 7 lat dostanie 1000 z≈Ç podwy≈ºki, reszta 420 z≈Ç
 
 UPDATE Pracownicy 
 SET Podwyzki =
@@ -81,7 +81,7 @@ CASE WHEN data_zatrudnienia < DATEADD (Year, -7, GETDATE() ) THEN 1000
 ELSE 420
 END
 
---- Ile wynosi pensja pracownikÛw po podwyøkach
+--- Ile wynosi pensja pracownik√≥w po podwy≈ºkach
 
 SELECT imie, SUM(Pensja+podwyzki) as pensja_po_podwyzce
 FROM (
@@ -89,7 +89,7 @@ SELECT imie, pensja, podwyzki  FROM Pracownicy
 ) sum
 GROUP BY imie
 
---- Jakie jest nowe wynagrodzenie po podwyøkach pracownikÛw i o ile procent wzros≥o wzglÍdem starego?
+--- Jakie jest nowe wynagrodzenie po podwy≈ºkach pracownik√≥w i o ile procent wzros≈Ço wzglƒôdem starego?
 
 WITH aaa AS (
 SELECT imie, pensja, podwyzki
@@ -103,7 +103,7 @@ ROUND(((MAX(pensja+podwyzki) - MIN(pensja)) / MIN(pensja)) * 100, 2)
 as wzrost_procentowy from aaa
 GROUP BY aaa.imie
 
---- KtÛrzy pracownicy odnotowali wzrost podwyøki powyøej 20%?
+--- Kt√≥rzy pracownicy odnotowali wzrost podwy≈ºki powy≈ºej 20%?
 
 WITH aaa AS (
 SELECT imie, pensja, podwyzki
@@ -118,7 +118,7 @@ FROM aaa
 GROUP BY aaa.imie
 HAVING ROUND(((MAX(pensja+podwyzki) - MIN(pensja)) / MIN(pensja)) * 100, 2) > 20
 
---- Wzrost Procentowy po podwyøkach od najwiÍkszego do najmniejszego
+--- Wzrost Procentowy po podwy≈ºkach od najwiƒôkszego do najmniejszego
 
  WITH 
  aaa AS (
