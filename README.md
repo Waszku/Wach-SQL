@@ -20,4 +20,6 @@ QUESTIONS:
 8. How many companies was founded after 2000?
 9. What companies was founded after 2000?
 10. What is a name of every company on the stock market?
-11. 
+11. What is the total amount of income taxes paid by companies based in Texas?
+12. By what percentage did Amazon have more annual revenue than Apple?
+13. Which companies have more employees than the average number of employees for all companies in the table?
