@@ -1,2 +1,2 @@
-# Wach-SQL
+# Wach-SQL-PowerBI
 SQL files
