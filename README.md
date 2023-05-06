@@ -4,9 +4,11 @@ PowerBI files
 
 Tech Company PROJECT
 
-Data was downloaded from kaggle.com and shows 50 the biggest Tech Companies and their financial stuff like for example annual revenue, taxes, sectors they operate in etc. in 2022-2023.
+Data was downloaded from kaggle.com. 
+Project shows 50 the biggest Tech Companies and their financial stuff like for example annual revenue, taxes, sectors they operate in etc. in 2022-2023.
 After downloading the file I cleant the data in Excel.
 We have here 50 companies, so it equals 50 rows.
+At the end the queries was put in PowerBI in order to do dashboards.
 
 QUESTIONS:
 
