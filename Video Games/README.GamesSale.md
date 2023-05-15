@@ -3,18 +3,19 @@ having regard the quantity of sold games.
 
 QUESTIONS: 
 
-1.Best sales results in all regions.
+Best sales results in all regions.
 
-2.Top 3 platforms with the most games sold.
+Top 3 platforms with the most games sold.
 
-3. How many games were sold on these 3 platforms (from question above) in each region?
-4. 
-5. TOP 10 best selling games.
-6. 
-7. The best games in every region.
-8. 
-9. Which games released before 2000 have global sales over 15 million?
-10. 
-11. What genres of games have been sold the most?
-12. 
-13. The game publishers with the highest volumes sold in each region.
+How many games were sold on these 3 platforms (from question above) in each region?
+
+TOP 10 best selling games.
+
+The best games in every region.
+
+Which games released before 2000 have global sales over 15 million?
+
+What genres of games have been sold the most? 
+
+The game publishers with the highest volumes sold in each region.
+
