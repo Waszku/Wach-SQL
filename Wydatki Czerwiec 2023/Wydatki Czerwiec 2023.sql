@@ -1,25 +1,6 @@
 USE [Wydatki Czerwiec 2023]
 SELECT * FROM Wydatki
 
-Analiza wydatkow
-1. Suma wydatkow dla kazdego sklepu.
-2. Srednia wartosc wydatkow dla poszczegolnych dni.
-3. Sklep, w ktorym zostalo wydane najwiecej pieniedzy.
-
-Trendy zakupowe
-1. Suma wydatkow dla kazdego dnia.
-2. Sklepy, w ktorych dokonywano najwiekszych zakupow.
-3. Procentowy udzial wydatkow w poszczegolnych sklepach.
-
-Analiza daty
-1. Dzien tygodnia, w ktorym wydano najwiecej pieniedzy.
-2. Srednia wartosc wydatkow dla kazdego dnia tygodnia.
-
-Analiza sklepow 
-1. Srednia wartosc zamowienia dla kazdego sklepu.
-2. Suma laczna wydatkow w miesiacu czerwiec
-3. Liczba wystapien zrobienia zakupow w danym sklepie
-4. Ile srednio zostalo wydanych pieniedzy w ciagu dnia
 
 ANALIZA WYDATKOW 01.06 - 30.06
 
