@@ -1,0 +1,14 @@
+A file contains data of online store. You can find there information about:
+
+1. What is number of customers who bought only once in this store?
+2. Which customer ordered the most quantity of products?
+3. Which customer ordered least of quantity of products?
+4. How much the company made between 2010 and 2011?
+5. From which countries were customers who spent the most?
+6. The most buy items
+7. From what countries were customers the most? (TOP 10)
+8. What was number of orders by country? (TOP 10)
+9. How much the company made per day?
+10. How much money was left by every customer (on average)?
+11. Percentage of countries outside the UK
+12. TOP 10 customers who bought the most often
